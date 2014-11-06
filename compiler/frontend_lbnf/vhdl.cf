@@ -1,0 +1,15 @@
+Tentity.	   Type_specifier ::= "entity";
+Tarchitecture. Type_specifier ::= "architecture";
+
+Iname       ImportName;
+Iimport     LibImportTree ::= ImportName;
+_.          LibImportTree ::= ImportName "." LibImportTree ";";
+Dlibrary .  LibraryDeclaration ::= "library" Module;
+Ilibrary .  LibraryImport ::= "use" LibImportTree;
+
+BModule     Module ::= Type_specifer;
+
+Etrue.      Constant ::= "'1'";
+Efalse.     Constant ::= "'0'";
+
+comment "-- ";
